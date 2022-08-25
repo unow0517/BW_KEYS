@@ -1,0 +1,60 @@
+<% layout('layouts/boilerplate') %> 
+<%- include('./partials/searchBar.ejs') %> 
+<br>
+<p class="fw-bolder fs-1">Filter: 
+<%- data.userFilter.replace(`{`,'').replace(`}`,'') %></p>
+<br>
+<p class="fs-2"><span class="fw-bold"><%= data.setRegbez.length %></span> Regierungs Bezirk,
+  <span class="fw-bold"><%= data.setRegion.length %></span> Region, 
+  <span class="fw-bold"><%= data.setKreis.length %></span> Kreis,
+  <span class="fw-bold"><%= data.setGemeinde.length %></span> Gemeinde,
+  <span class="fw-bold"><%= data.setGemarkung.length %></span> Gemarkung,
+  <span class="fw-bold"><%= data.setFlurname.length %></span> Flur
+are found</p>
+<br>
+<a href="/" role="button" class="btn btn-warning">Clear Filter</a>
+<br>
+<br>
+<table class="table table-bordered table-striped ">
+  <thead class="table-dark">
+    <tr>
+      <th class='text-center' scope="col">Index</th>
+      <th class='text-center' scope="col">RegbezNr</th>
+      <th class='text-center' scope="col">Regbez</th>
+      <th class='text-center' scope="col">RegionNr</th>
+      <th class='text-center' scope="col">Region</th>
+      <th class='text-center' scope="col">KreisNr</th>
+      <th class='text-center' scope="col">Kreis</th>
+      <th class='text-center' scope="col">GemeindeNr</th>
+      <th class='text-center' scope="col">Gemeinde</th>
+      <th class='text-center' scope="col">GemarkungNr</th>
+      <th class='text-center' scope="col">Gemarkung</th>
+      <th class='text-center' scope="col">FlurNr</th>
+      <th class='text-center' scope="col">Flurname</th>
+    </tr>
+  </thead>
+  <% if (data.results.length > 0){  
+    data.results.forEach(function(data,index){
+  %>
+  <tr>
+    <th class="text-center align-middle" scope="row"><%-index+1%></th>
+    <td class="text-center align-middle"><%= data.RegbezNr %></td>
+    <td class="text-center align-middle"><%= data.Regbez %></td>
+    <td class="text-center align-middle"><%= data.RegionNr %></td>
+    <td class="text-center align-middle"><%= data.Region %></td> 
+    <td class="text-center align-middle"><%= data.KreisNr %></td>
+    <td class="text-center align-middle"><%= data.Kreis %></td>      
+    <td class="text-center align-middle"><%= data.GemeindeNr %></td>
+    <td class="text-center align-middle"><%= data.Gemeinde %></td>    
+    <td class="text-center align-middle"><%= data.GemarkungNr %></td>
+    <td class="text-center align-middle"><%= data.Gemarkung %></td>       
+    <td class="text-center align-middle"><%= data.FlurNr %></td>
+    <td class="text-center align-middle"><%= data.Flurname %></td>     
+  </tr>
+  <% })} else {%> 
+    <tr>No Data Found</tr>
+  <%}%>
+</table>
+<a href="/">Clear Filter</a>
+
+

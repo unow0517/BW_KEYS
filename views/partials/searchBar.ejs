@@ -1,0 +1,99 @@
+<div class="my-3">
+  <form action="/searchregbez" class="my-auto" method="POST">
+    <div class="form-group col-md-9 d-flex justify-content-between align-items-center">
+      <div class="w-50">
+        <label class="mx-3" for="regbez">Regionalbezirk</label>
+      </div>
+      <!-- <input type="text" id="regbez" name="regbez"> -->
+      <select class='form-control mx-6' id="regbez" name="regbez">
+        <option disabled selected value> -- select an option -- </option>
+        <% for ( i of data.setRegbez){ %>
+          <option value="<%= i %>"><%= i %> </option>
+        <% } %> 
+      </select>
+      <button type="submit" class="btn btn-primary btn-sm mx-3">Submit</button>
+    </div>
+  </form>
+</div>
+<div class="my-3">
+  <form action="/searchregion" method="POST">
+    <div class="form-group col-md-9 d-flex justify-content-between align-items-center">
+      <div class="w-50">
+        <label class="mx-3" for="region">Region</label>
+      </div>
+      <!-- <input type="text" id="region" name="region"> -->
+      <select class='form-control mx-6' id="region" name="region">
+        <option disabled selected value> -- select an option -- </option>
+        <% for ( i of data.setRegion){ %>
+          <option value="<%= i %>"><%= i %> </option>
+        <% } %> 
+      </select>
+      <button type="submit" class="btn btn-primary btn-sm mx-3">Submit</button>
+    </div>
+  </form>
+</div>
+<div class="my-3">
+  <form action="/searchkreis" method="POST">
+    <div class="form-group col-md-9 d-flex justify-content-between align-items-center">
+      <div class="w-50">
+        <label class="mx-3" for="kreis">Kreis</label>
+      </div>
+      <!-- <input type="text" id="kreis" name="kreis"> -->
+      <select class='form-control mx-6' id="kreis" name="kreis">
+        <option disabled selected value> -- select an option -- </option>
+        <% for ( i of data.setKreis){ %>
+          <option value="<%= i %>"><%= i %> </option>
+        <% } %> 
+      </select>
+      <button type="submit" class="btn btn-primary btn-sm mx-3">Submit</button>
+    </div>
+  </form>
+</div>
+<div class="my-3">
+  <form action="/searchgemeinde" method="POST">
+    <div class="form-group col-md-9 d-flex justify-content-between align-items-center">  
+      <div class="w-50">
+        <label class="mx-3" for="gemeinde">Gemeinde</label>
+      </div>
+      <select class='form-control mx-6' id="gemeinde" name="gemeinde">
+        <option disabled selected value> -- select an option -- </option>
+        <% for ( i of data.setGemeinde){ %>
+          <option value="<%= i %>"><%= i %> </option>
+        <% } %> 
+      </select>
+      <button type="submit" class="btn btn-primary btn-sm mx-3">Submit</button>
+    </div>
+  </form>
+</div>
+<div class="my-3">
+  <form action="/searchgemarkung" method="POST">
+    <div class="form-group col-md-9 d-flex justify-content-between align-items-center">
+      <div class="w-50">
+        <label class="mx-3" for="gemarkung">Gemarkung</label>
+      </div>
+      <select class='form-control mx-6' id="gemarkung" name="gemarkung">
+        <option disabled selected value> -- select an option -- </option>
+        <% for ( i of data.setGemarkung){ %>
+          <option value="<%= i %>"><%= i %> </option>
+        <% } %> 
+      </select>
+      <button type="submit" class="btn btn-primary btn-sm mx-3">Submit</button>
+    </div>
+  </form>
+</div>
+<div class="my-3">
+  <form action="/searchflurname" method="POST">
+    <div class="form-group col-md-9 d-flex justify-content-between align-items-center">
+      <div class="w-50">
+        <label class="mx-3" for="flurname">Flurname</label>
+      </div>
+      <select class='form-control mx-6' id="flurname" name="flurname">
+        <option disabled selected value> -- select an option -- </option>
+        <% for ( i of data.setFlurname){ %>
+          <option value="<%= i %>"><%= i %> </option>
+        <% } %> 
+      </select>
+      <button type="submit" class="btn btn-primary btn-sm mx-3">Submit</button>
+    </div>
+  </form>
+</div>
