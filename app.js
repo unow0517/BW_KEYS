@@ -9,7 +9,7 @@ const ejsMate = require('ejs-mate');
 const connection = mysql.createConnection({
   host     : 'database-1.c4kji6aomgu8.eu-central-1.rds.amazonaws.com',
   user     : 'admin',
-  password : 'Fhtep2031!',
+  password : '!!PASSWORD IS SECRET!!',
   database : 'bw_keys'
 });
 
